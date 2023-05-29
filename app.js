@@ -87,7 +87,11 @@ client.on('message', async msg => {
 
   } else if (msg.body === '!ping') {
       // Send a new message to the same chat
+      //chat.sendStateTyping();
+      const chat = await msg.getChat();
+      // simulates typing in the chat
       chat.sendStateTyping();
+      console.log(chat.sendStateTyping());
       client.sendMessage(msg.from, 'pong');
 
   } else if (msg.body.startsWith('!sendto ')) {
