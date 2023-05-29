@@ -57,8 +57,8 @@ const client = new Client({
   authStrategy: new LocalAuth()
 });
 
+/*
 client.on('message', msg => {
-  /*
   if (msg.body == '!ping') {
     msg.reply('pong');
   } else if (msg.body == 'good morning') {
@@ -80,6 +80,7 @@ client.on('message', msg => {
     });
   }
   */
+client.on('message', async msg => {
   if (msg.body === '!ping reply') {
     // Send a new message as a reply to the current one
     msg.reply('pong');
