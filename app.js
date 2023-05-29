@@ -87,6 +87,7 @@ client.on('message', async msg => {
 
   } else if (msg.body === '!ping') {
       // Send a new message to the same chat
+      chat.sendStateTyping();
       client.sendMessage(msg.from, 'pong');
 
   } else if (msg.body.startsWith('!sendto ')) {
