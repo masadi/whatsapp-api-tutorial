@@ -43,6 +43,7 @@ const client = new Client({
   puppeteer: {
     headless: true,
     args: [
+      '--use-gl=egl',
       '--no-sandbox',
       '--disable-setuid-sandbox',
       '--disable-dev-shm-usage',
