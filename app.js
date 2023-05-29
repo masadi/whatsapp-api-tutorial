@@ -91,7 +91,7 @@ client.on('message', async msg => {
       const chat = await msg.getChat();
       // simulates typing in the chat
       chat.sendStateTyping();
-      console.log(chat.sendStateTyping());
+      console.log(chat);
       client.sendMessage(msg.from, 'pong');
 
   } else if (msg.body.startsWith('!sendto ')) {
